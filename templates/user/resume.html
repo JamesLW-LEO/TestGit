@@ -1,0 +1,42 @@
+{% extends 'user/base.html' %}
+{% block content %}
+<h5 style="text-align: center;font-weight: bold;font-size: 16px">制作简历</h5>
+<form action="" name="" method="post">
+    <table class="table table-bordered">
+        <tr>
+            <td>姓名</td>
+            <td><input type="text" name="name"></td>
+
+        </tr>
+        <tr>
+            <td>性别</td>
+            <td><input type="radio" name="sex">男<input type="radio" name="sex">女</td>
+        </tr>
+        <tr>
+            <td>年龄</td>
+            <td><input type="text" name="age"></td>
+        </tr>
+        <tr>
+            <td>照片</td>
+            <td><input type="file" name="photo" value="上传头像"></td>
+        </tr>
+        <tr>
+            <td>毕业院校</td>
+            <td><input type="text" name="school"></td>
+        </tr>
+        <tr>
+            <td>专业技能</td>
+            <td><textarea name="skill"  cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td>项目经验</td>
+            <td><textarea name="experience" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="提交"></td>
+    </table>
+</form>
+{% endblock %}
+{% block extrajs %}
+{% endblock %}

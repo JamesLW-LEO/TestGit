@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Non-genus Login</title>
+    <link rel="stylesheet" href="../static/css/login.css"/>
+</head>
+<body>
+{% if feedback %}
+    <script>alert("{{feedback}}")</script>
+{% endif %}
+{% if msg %}
+    <script>alert("{{msg}}")</script>
+{% endif %}
+<div>
+    <div class="inner-left">
+        <img src="../static/image/am.png"/>
+    </div>
+    <div class="inner-right">
+        <div>
+            <div class="name" style="text-align: center">Non-genus</div>
+            <div class="me">为IT行业应聘者提供一站式信息分析服务</div>
+        </div>
+
+        <div class="lo-pa">
+            <div class="yhdl">
+                用户登录
+            </div>
+            <div class="main">
+                <form action="{{ url_for('usercontroller.loginValidate') }}" onsubmit="return checkInfo();"
+                      method="post">
+                    <input type="text" class="yhm" name="username" id="name" style="width: 330px; height: 40px;"
+                           placeholder="请输入账号"/>
+                    <input type="password" class="pwd" name="userpwd" id="pwd" style="width: 330px; height: 40px;"
+                           placeholder="请输入密码"/>
+                    <a href="{{ url_for('usercontroller.register') }}"><p>没有账号？点击注册</p></a>
+                    <input type="submit" class="dl" value="登录"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function $1(ID) {
+        return document.getElementById(ID)
+    }
+
+    function checkInfo() {
+        if ($1("name").value == "" || $1("pwd").value == "") {
+            alert('用户名或密码不能为空')
+            return false;
+        } else {
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

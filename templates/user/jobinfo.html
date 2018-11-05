@@ -1,0 +1,76 @@
+{% extends 'user/base.html' %}
+{% block content %}
+    <h5 style="text-align: center;font-weight: bold;font-size: 16px">招聘信息</h5>
+    <form action="/getsortjobinfo" name="" method="post">
+        <table class="table table-bordered">
+            <tr>
+                <td>选择</td>
+                <td>职位:&nbsp;&nbsp;<input type="text" name="position" placeholder="如:python java"></td>
+                <td>地区:&nbsp;&nbsp;<select name="city">
+                    <option value="全国">全国</option>
+                    <option value="北京">北京</option>
+                    <option value="上海">上海</option>
+                    <option value="广州">广州</option>
+                    <option value="深圳">深圳</option>
+                    <option value="武汉">武汉</option>
+                </select>
+                </td>
+                <td><input type="submit" value="搜索" class="btn btn-info"></td>
+            </tr>
+        </table>
+    </form>
+    <table class="table table-bordered table-hover">
+        <tr style="font-weight: bold;text-align: center">
+            <td>职位名称</td>
+            <td>公司名</td>
+            <td>地点</td>
+            <td><a href="/sortminsalary">最低薪(万/月)</a></td>
+            <td><a href="/sortmaxsalary">最高薪(万/月)</a></td>
+        </tr>
+        <input type="hidden" name="currentPage" value="{{ currentPage }}"/>
+        <input type="hidden" name="pageNo" value="{{ pageNO }}"/>
+        {% for result in results %}
+            <tr>
+                <td>{{ result[1] }}</td>
+                <td>{{ result[2] }}</td>
+                <td>{{ result[3] }}</td>
+                <td>{{ result[4] }}</td>
+                <td>{{ result[5] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <h5 style="color:#f00;font-size:24px;line-height: 200px;text-align: center">{{ message }}</h5>
+    <nav>
+        <ul class="pagination navbar-btn">
+            {% set flag = 'sortjobinfo' %}
+            {% set prevPage = currentPage - 1 %}
+            {% if prevPage == 0 %}
+                <li class="disabled"><a href="javascript:;">上一页</a></li>
+            {% else %}
+                <li><a href="/getjobinfo?pageNO={{ pageNO }}&currentPage={{ prevPage }}">上一页</a></li>
+            {% endif %}
+            {% set nextPage = currentPage + 1 %}
+            {% if nextPage >= totalPage %}
+                <li class="disabled"><a href="javascript:;">下一页</a></li>
+            {% else %}
+                <li><a href="/getjobinfo?pageNO={{ pageNO }}&currentPage={{ nextPage }}">下一页</a></li>
+            {% endif %}
+            <li><a href="javascript:;">第{{ currentPage }}页</a></li>
+            <li><a href="javascript:;">共{{ totalPage }}页</a></li>
+            <li>
+                <a href="javascript:;">到 第</a>
+                <a><input type="text" name="num" id="jumpNum"
+                          style="width: 50px;padding:0 16px;border:0;outline: none;box-shadow: 0 0 1px #ccc">页</a>
+                <a href="javascript:jumpPage();">GO</a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}
+{% block extrajs %}
+    <script>
+        function jumpPage() {
+            wantPage = document.getElementById('jumpNum').value
+            window.location.href = '/getjobinfo?pageNO={{ pageNO }}&currentPage=' + wantPage
+        }
+    </script>
+{% endblock %}

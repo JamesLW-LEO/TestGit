@@ -1,0 +1,23 @@
+2018-11-01 09:09:37,173 - mainlogger - ERROR - 执行SQL：insert into t_user (username,userpwd,usertel) value (%s,%s,%s) params：('liuwang', 'lw159357', '15234412838')(1062, "Duplicate entry 'liuwang' for key 'username_UNIQUE'")
+2018-11-01 09:19:45,361 - mainlogger - ERROR - 执行SQL：insert into t_user (username,userpwd,usertel) value (%s,%s,%s) params：('liuwang', '123', '15234412838')(1062, "Duplicate entry 'liuwang' for key 'username_UNIQUE'")
+2018-11-01 12:02:12,780 - mainlogger - ERROR - 执行SQL：select * from t_job_info params：None'NoneType' object has no attribute 'settimeout'
+2018-11-01 16:08:17,294 - mainlogger - ERROR - 执行SQL：select * from t_job_info where jobPosition like '%java%' limit %s,%s params：(0, 10)unsupported format character 'j' (0x6a) at index 50
+2018-11-01 16:08:17,297 - mainlogger - ERROR - 执行SQL：select * from t_job_info where jobPosition like '%java%' limit %s,%s 出现异常，params: execute() first
+2018-11-01 16:10:12,132 - mainlogger - ERROR - 执行SQL：select * from t_job_info where jobPosition like '%java%' limit %s,%s params：(0, 10)unsupported format character 'j' (0x6a) at index 50
+2018-11-01 16:10:12,132 - mainlogger - ERROR - 执行SQL：select * from t_job_info where jobPosition like '%java%' limit %s,%s 出现异常，params: execute() first
+2018-11-01 16:20:55,945 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobCity = %s' params：('上海',)(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''上海''' at line 1")
+2018-11-01 16:20:55,945 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobCity = %s' 出现异常，params: execute() first
+2018-11-01 16:22:50,303 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobCity = %s' params：北京(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''北京''' at line 1")
+2018-11-01 16:22:50,305 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobCity = %s' 出现异常，params: execute() first
+2018-11-01 16:31:21,540 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobPosition like '%python%'and jobCity = %s params：('北京',)unsupported format character 'p' (0x70) at index 57
+2018-11-01 16:31:21,541 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobPosition like '%python%'and jobCity = %s 出现异常，params: execute() first
+2018-11-01 16:33:45,874 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobPosition like '%java%'and jobCity = 上海 params：None(1054, "Unknown column '上海' in 'where clause'")
+2018-11-01 16:33:45,874 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobPosition like '%java%'and jobCity = 上海 出现异常，params: execute() first
+2018-11-01 16:35:14,792 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobPosition like '%java%'and jobCity = 上海 params：None(1054, "Unknown column '上海' in 'where clause'")
+2018-11-01 16:35:14,793 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobPosition like '%java%'and jobCity = 上海 出现异常，params: execute() first
+2018-11-01 16:39:29,264 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobPosition like '%java%'and jobCity = 上海 params：None(1054, "Unknown column '上海' in 'where clause'")
+2018-11-01 16:39:29,264 - mainlogger - ERROR - 执行SQL：select count(*) from t_job_info where jobPosition like '%java%'and jobCity = 上海 出现异常，params: execute() first
+2018-11-01 16:41:30,961 - mainlogger - ERROR - 执行SQL：select * from t_job_info where jobPosition like '%java%' and jobCity =%s limit %s,%s params：('上海', 0, 10)unsupported format character 'j' (0x6a) at index 50
+2018-11-01 16:41:30,962 - mainlogger - ERROR - 执行SQL：select * from t_job_info where jobPosition like '%java%' and jobCity =%s limit %s,%s 出现异常，params: execute() first
+2018-11-01 16:43:28,676 - mainlogger - ERROR - 执行SQL：select * from t_job_info where jobPosition like '%python%' and jobCity ='深圳' limit %s,%s params：(0, 10)unsupported format character 'p' (0x70) at index 50
+2018-11-01 16:43:28,676 - mainlogger - ERROR - 执行SQL：select * from t_job_info where jobPosition like '%python%' and jobCity ='深圳' limit %s,%s 出现异常，params: execute() first

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+    <link rel='stylesheet' href='{{ url_for("static",filename="css/index.css") }}' type='text/css'/>
+    <link rel='stylesheet' href='{{ url_for("static",filename="css/footer.css") }}' type='text/css'/>
+</head>
+<body>
+<div id="box_wrap">
+    <div id="box1" class='fixed'>
+        <div id='wrap'>
+            <ul id='main'>
+            </ul>
+            <ul id='styleBtn'>
+                <li>Table</li>
+                <li>Sphere</li>
+                <li>Helix</li>
+                <li>Grid</li>
+                <li>Circle</li>
+            </ul>
+            <div id='show'>
+                <div class='s-title'>Python开发工程师</div>
+                <div class='s-img'>任职要求：<br>
+
+                    1. 全日制本科及以上学历，计算机相关专业，一年以上相关工作经验；<br>
+
+                    2. 熟悉 Python 语言，熟悉Python 标准库，有一定的开发经验。<br>
+
+                    3. 熟悉 Django Web框架以及mako模板；<br>
+
+                    4. 熟练使用 CSS, html, JavaScript,以及 jQuery框架。<br>
+
+                    5. 熟悉 Linux 基本使用。<br>
+
+                    6. 熟悉 mongodb 数据库。
+                </div>
+                <div class='s-author'>中国电子科技集团公司第十五研究所</div>
+                <div class='s-dec'>
+                    中国电子科技集团公司第十五研究所（又称华北计算技术研究所，以下简称十五所），位于北京市海淀区中关村科技园区。十五所创建于1958年，为大型综合性计算技术研究所，现有员工5500余人，其中专业技术人员占78%以上，全所占地面积235亩，建筑面积16.7万平方米。目前，现代化、多功能、地标性新园区顺利在建中。
+                </div>
+            </div>
+        </div>
+        <div id='frame'>
+            <iframe src='{{ url_for("video") }}' frameborder='0' width="100%" height="100%"></iframe>
+            <div id="back">Back</div>
+        </div>
+    </div>
+    <div id="box2" class='fixed'>
+        <div id="box_top">
+            <h5 style="padding-top: 2%; text-align: center; font-size: 24px;color: #fff3cd;font-weight: normal">
+                IT发达城市不同类型职位的信息对比</h5>
+        </div>
+        <div id="box_btm">
+            <div id="box_left">
+                <div id="job_xq"></div>
+                <div id="job_cp"></div>
+                <div id="job_xs"></div>
+            </div>
+            <div id="box_center">
+                <div id="job_content">
+                </div>
+                <div id="job_zb">
+
+                </div>
+            </div>
+            <div id="box_right">
+                <div id="job_kf"></div>
+                <div id="job_cs"></div>
+                <div id="job_yw"></div>
+            </div>
+        </div>
+    </div>
+    <div id="box3" class='fixed'>
+        <h5 style="padding-top: 2%; text-align: center; font-size: 24px;color: #fff3cd;font-weight: normal">
+            IT发达城市开发岗的信息对比</h5>
+        <div id="dev_content">
+
+            <div id="dev_c"></div>
+            <div id="dev_java"></div>
+            <div id="dev_py"></div>
+            <div id="dev_ai"></div>
+            <div id="dev_web"></div>
+        </div>
+        <div id="dev_footer">
+            <div id="dev_ld"></div>
+            <div id="dev_bar"></div>
+            <div id="dev_wordc"></div>
+        </div>
+    </div>
+    <div id="box4" class='fixed' style="background-image: url('../static/image/bg3.jpg');">
+        <div id="pro_content">
+            <h5 style="text-align: center;font-size: 24px;line-height: 60px;color:#ff6">非你莫属-项目介绍</h5>
+            <p style="text-indent: 2em;line-height: 40px;font-size: 16px;color: #ddd;letter-spacing: 2px;">
+                “非你莫属”是致力于为从事IT行业的年轻人提供更好的就业和择业条件，我们的开发团队主要是针对IT行业发达的五大城市：北京、上海、广州、深圳、武汉的计算机软件行业中不同类型的职位展开研究，
+                从网络上获取大量的招聘信息，将采集到的数据进行加工、处理，为用户提供更加直观、有效的信息。我们的宗旨是：“推翻大学生毕业等于失业的论断”。优秀的你，优越的职位——非你莫属。</p>
+            <hr style="color: #ccc">
+        </div>
+        <div id="pro_team">
+            <h5 style="text-align: center;font-size: 24px;line-height: 80px;color:#ff6">非你莫属-开发团队</h5>
+            <div class="moviemessage">
+                <div class="messagelist">
+                    <div class="listpic">
+                        <img src="../static/image/lw.jpg" width="240" height="240" border="0" alt="">
+                    </div>
+                    <div class="listtext">
+                        <p>项目组长:刘旺<br>负责整个项目的设计、开发，<br>任务的分工</p>
+                    </div>
+                </div>
+                <div class="messagelist">
+                    <div class="listpic">
+                        <img src="../static/image/zgm.JPG" width="240" height="240" border="0" alt="">
+                    </div>
+                    <div class="listtext">
+                        <p>项目组员:张国铭<br>系统的前端页面开发，<br>登录、注册模块</p>
+                    </div>
+                </div>
+                <div class="messagelist">
+                    <div class="listpic">
+                        <img src="../static/image/3.jpg" width="240" height="240" border="0" alt="">
+                    </div>
+                    <div class="listtext">
+                        <p>项目组员:卢怡璇<br>需求分析，UI设计，<br>数据库设计，数据采集</p>
+                    </div>
+                </div>
+                <div class="messagelist">
+                    <div class="listpic">
+                        <img src="../static/image/wwh.jpg" width="240" height="240" border="0" alt="">
+                    </div>
+                    <div class="listtext">
+                        <p>项目组员:王武辉<br>数据采集，前后台的数据交互，<br>数据可视化</p>
+                    </div>
+                </div>
+                <div class="messagelist">
+                    <div class="listpic">
+                        <img src="../static/image/fc.jpg" width="240" height="240" border="0" alt="">
+                    </div>
+                    <div id="" class="listtext">
+                        <p>项目组员:费冲<br>数据采集，数据处理，<br>数据可视化</p>
+                    </div>
+                </div>
+            </div>
+            <hr style="color: #ccc">
+        </div>
+        <div id="pro_link" style="width: 1200px;margin: 0 auto">
+            <h5 style="text-align: center;font-size: 24px;line-height: 60px;color:#ff6;text-align: center">
+                非你莫属-联系我们</h5>
+            <div style="width: 1200px;margin:0 auto 10px;text-align: center;color:#ccc;">
+                <span>qq:2222222222</span>
+                <span>邮箱:lxbd2222222@741.com</span>
+            </div>
+            <hr style="color: #ccc">
+        </div>
+        <div id="pro_copyright" style="width: 1200px;margin: 0 auto;color: #333;text-align: center">©2018 Never-Autism
+        </div>
+    </div>
+    <div id='box_select'>
+        <ul>
+            <li class='onselect'>Home</li>
+            <li>Data</li>
+            <li>Service</li>
+            <li>More</li>
+            {% if result %}}
+            {% set name = result[1] %}
+            <li><a href="{{ url_for('usermgcontroller.usermg',name = result[1]) }}"
+                   style="color: #fff;font-weight: bold;font-style:italic">{{ name }}</a></li>
+            <li><a href="{{ url_for('usercontroller.logout') }}">Logout</a></li>
+            {% else %}
+            <li><a href="{{ url_for('usercontroller.login') }}" target="_self">Sign in</a></li>
+            <li><a href="{{ url_for('usercontroller.register') }}">Register</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+<script src='static/js/jquery-3.2.1.min.js' type='text/javascript'></script>
+<script src='static/js/jquery.mousewheel.js' type='text/javascript'></script>
+<script src="static/js/echarts.min.js"></script>
+<script src="static/js/echarts-wordcloud.min.js"></script>
+<script src="static/js/china.js"></script>
+<script src="static/js/cool3d.js"></script>
+<script src='static/js/index.js' type='text/javascript'></script>
+<script src="static/js/main.js"></script>
+<script type="text/javascript">
+    var demoArr = [
+        {title: '需求', author: '', date: '10-30K/M'},
+        {title: '销售', author: '', date: '10-30K/M'},
+        {title: '产品', author: '', date: '10-30K/M'},
+        {title: '开发', author: '', date: '10-30K/M'},
+        {title: '测试', author: '', date: '10-30K/M'},
+        {title: '运维', author: '', date: '10-30K/M'},
+        {title: 'Java', author: '', date: '10-30K/M'},
+        {title: 'Py', author: '', date: '10-30K/M'},
+        {title: 'Web', author: '', date: '10-30K/M'},
+        {title: 'AI', author: '', date: '10-30K/M'},
+        {title: 'C', author: '', date: '10-30K/M'},
+    ];
+</script>
+</body>
+</html>

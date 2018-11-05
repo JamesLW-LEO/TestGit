@@ -1,0 +1,2 @@
+2018-10-29 21:42:56,689 - mainlogger - ERROR - Ö´ÐÐSQL£ºselect jobcount from t_xs params£ºNone'NoneType' object has no attribute 'settimeout'
+2018-10-29 21:51:18,150 - mainlogger - ERROR - Ö´ÐÐSQL£ºselect jobcount from t_cs params£ºNone'NoneType' object has no attribute 'settimeout'

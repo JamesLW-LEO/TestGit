@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding:0;
+}
+#pro_content{
+    width: 1200px;
+    margin:0px auto;
+    height: 230px;
+}
+#pro_team{
+    width:1200px;
+    margin: 0 auto;
+}
+.moviemessage{
+    display:flex;
+    width:1200px;
+    margin:15px auto 50px;
+}
+.messagelist{
+    position:relative;
+    width:240px;
+    height:240px;
+    /*margin-left:30px;*/
+    perspective:1000px;
+}
+.listpic{
+    width:240px;
+    height:240px;
+    border-radius: 50%;
+    transform:rotateY(0deg);
+    transition:transform 0.5s;
+}
+.listpic img{
+    border-radius: 50%;
+}
+.messagelist:hover .listpic{
+    transform:rotateY(90deg);
+}
+.listtext{
+    position:absolute;
+    top:0;
+    left:0;
+    width:240px;
+    height:240px;
+    border-radius: 50%;
+    transform:rotateY(90deg);
+    transition:transform 0.5s;
+    background:rgba(0,0,0,.5);
+}
+.messagelist:hover .listtext{
+    transform:rotateY(0deg);
+}
+.listtext p{
+    top:0;
+    left:0;
+    color:#ddd;
+    font-size:16px;
+    text-align:center;
+    line-height:30px;
+    padding-top:60px;
+}

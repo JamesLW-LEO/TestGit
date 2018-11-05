@@ -1,0 +1,13 @@
+2018-10-30 09:12:48,670 - mainlogger - ERROR - 执行SQL：select maxsalary,minsalary,avgsalary,jobcount from t_xq params：None'NoneType' object has no attribute 'settimeout'
+2018-10-30 09:13:36,285 - mainlogger - ERROR - 执行SQL：select * from t_job_count params：None'NoneType' object has no attribute 'settimeout'
+2018-10-30 09:16:27,202 - mainlogger - ERROR - 执行SQL：select * from t_job_count params：None'NoneType' object has no attribute 'settimeout'
+2018-10-30 09:16:44,295 - mainlogger - ERROR - 执行SQL：select maxsalary,minsalary,avgsalary,jobcount from t_xq params：NoneCursor closed
+2018-10-30 09:50:04,378 - mainlogger - ERROR - 执行SQL：select maxsalary,minsalary,avgsalary,jobcount from t_xq params：None'NoneType' object has no attribute 'settimeout'
+2018-10-30 10:09:14,501 - mainlogger - ERROR - 执行SQL：select maxsalary,minsalary,avgsalary,jobcount from t_xq params：NoneCursor closed
+2018-10-30 10:13:11,578 - mainlogger - ERROR - 执行SQL：select maxsalary,minsalary,avgsalary,jobcount from t_xq params：None'NoneType' object has no attribute 'read'
+2018-10-30 10:13:11,579 - mainlogger - ERROR - 执行SQL：select * from t_job_count params：None'NoneType' object has no attribute 'settimeout'
+2018-10-30 10:20:16,357 - mainlogger - ERROR - 执行SQL：select * from t_job_count params：None[WinError 10038] 在一个非套接字上尝试了一个操作。
+2018-10-30 10:21:11,329 - mainlogger - ERROR - 执行SQL：select * from t_job_count params：None'NoneType' object has no attribute 'read'
+2018-10-30 10:22:24,335 - mainlogger - ERROR - 执行SQL：select maxsalary,minsalary,avgsalary,jobcount from t_xq params：None'NoneType' object has no attribute 'read'
+2018-10-30 10:22:37,337 - mainlogger - ERROR - 执行SQL：select * from t_job_count params：None'NoneType' object has no attribute 'read'
+2018-10-30 10:43:46,647 - mainlogger - ERROR - 执行SQL：select * from t_job_count params：NoneCursor closed

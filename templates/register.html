@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Non-genus register</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/register.css',external=True)}}"></link>
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script>
+        function ajaxUsername() {
+            uname = document.regform.username.value
+            console.log(uname)
+            if (uname == "")
+                return;
+            $.ajax({
+                url: '/validusername',
+                type: 'post',
+                //dataType: 'json',
+                data: {
+                    'username': uname
+                },
+                error: function () {
+                    alert("11")
+                },
+                success: function (data) {
+                    console.log(data)
+                    if (data == "1") {
+                        document.getElementById('content').style = 'color:red;font-size:14px'
+                        document.getElementById('content').innerHTML = '抱歉，该用户名已被注册，请更换!'
+                    } else if (data == "0") {
+                        document.getElementById('content').style = 'color:green;font-size:14px'
+                        document.getElementById('content').innerHTML = '恭喜,该用户名可以注册！'
+                    }
+                }
+            });
+        }
+
+
+        function reg_submit() {
+            userName = document.regForm.username.value
+            userPwd = document.regForm.userpwd.value
+            reUserPwd = document.regForm.reuserpwd.value
+            tel = document.regForm.tel.value
+
+
+            reg = /^[a-zA-Z\_][1-9a-zA-Z\_]{5,17}$/
+            regPwd = /^\w{6,18}$/
+            if (!reg.test(userName)) {
+                userMsg = document.getElementById("userMsg")
+                userMsg.style = "color:red;font-size:14px"
+                userMsg.innerHTML = "用户名必须是由数字字母下划线组成"
+                return false
+            }
+
+            if (userPwd != reUserPwd || !regPwd.test(userPwd)) {
+                msg = document.getElementById("pwdMsg")
+                msg.style = "color:red;font-size:14px"
+                msg.innerHTML = "密码不符合要求,或两次密码不一致"
+                return false
+            }
+            if(tel == ""){
+                userTel = document.getElementById('userTel')
+                userTel.style = "color:red;font-size:14px"
+                userTel.innerHTML = "手机号码不能为空"
+            }
+            return true
+        }
+    </script>
+</head>
+<body style="background: url(../static/image/bg-login-dataviz.jpg);">
+{% if feedback %}
+<script>alert("{{feedback}}")</script>
+{% endif %}
+<div>
+    <div class="inner-right">
+        <div>
+            <div class="name">Non-genus</div>
+            <div class="me">为IT行业应聘者提供一站式信息分析服务</div>
+        </div>
+        <div class="lo-pa">
+            <div class="yhdl">
+                用户注册
+            </div>
+            <div class="main">
+                <form action="{{ url_for('usercontroller.registerS') }}" method="post" onsubmit="return reg_submit();"
+                      name="regform"
+                      style="color: #fff;">
+                    <p class="yhm">用户名：<input type="text" name="username"
+                                              style="width: 274px; height: 40px;color: #fff;"
+                                              placeholder="6-16位字母或数字" onblur="javascript:ajaxUsername();"/></p>
+                    <p id="content"></p>
+                    <p id="userMsg"></p>
+                    <p class="pwd">密码：<input type="password" name="userpwd"
+                                             style="width: 290px; height: 40px;color: #fff;"
+                                             placeholder="密码（6-16位）"/>
+                    </p>
+                    <p id="userPwd"></p>
+                    <p class="repwd">确认密码：<input type="password" style="width: 260px; height: 40px;color: #fff;"
+                                                 name="reuserpwd" placeholder="确认密码"/>
+                    </p>
+                    <p class="tel">手机号码：<input type="text" name="tel" style="width: 260px; height: 40px;color: #fff;"
+                                               placeholder="请输入手机号码"/></p>
+                    <p id="userTel"></p>
+                    <input type="submit" class="reg" value="注册"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
